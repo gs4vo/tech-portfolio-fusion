@@ -21,9 +21,9 @@ const Hero = () => {
     >
       {/* Gradient background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-tech-blue rounded-full blur-[120px] opacity-20 animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-[50%] h-[50%] bg-tech-purple rounded-full blur-[120px] opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-40 left-[20%] w-[30%] h-[30%] bg-tech-cyan rounded-full blur-[100px] opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-tech-red rounded-full blur-[120px] opacity-20 animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-[50%] h-[50%] bg-tech-darkred rounded-full blur-[120px] opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-40 left-[20%] w-[30%] h-[30%] bg-tech-red rounded-full blur-[100px] opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
 
       {/* Animated circuit pattern */}
@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div className="text-center lg:text-left">
           <div className="inline-flex items-center bg-secondary/80 px-4 py-2 rounded-full mb-8 backdrop-blur-sm border border-white/10">
-            <Terminal className="w-4 h-4 mr-2 text-tech-indigo" />
+            <Terminal className="w-4 h-4 mr-2 text-tech-red" />
             <span className="text-sm">Desenvolvedor Backend</span>
           </div>
           
@@ -56,7 +56,7 @@ const Hero = () => {
                 Ver Projetos
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-tech-indigo text-tech-indigo hover:bg-tech-indigo/10 transition-all duration-300">
+            <Button asChild variant="outline" className="border-tech-red text-tech-red hover:bg-tech-red/10 transition-all duration-300">
               <a href="#contact" className="hover:translate-y-[-2px] transition-transform">
                 <Mail className="mr-2" />
                 Entre em Contato
@@ -69,7 +69,7 @@ const Hero = () => {
               href="https://github.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-tech-indigo transition-colors animate-pulse-glow p-2 hover:scale-110 transition-transform"
+              className="text-gray-400 hover:text-tech-red transition-colors animate-pulse-glow p-2 hover:scale-110 transition-transform"
               aria-label="GitHub"
             >
               <Github size={24} />
@@ -78,14 +78,14 @@ const Hero = () => {
               href="https://linkedin.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-tech-indigo transition-colors animate-pulse-glow p-2 hover:scale-110 transition-transform"
+              className="text-gray-400 hover:text-tech-red transition-colors animate-pulse-glow p-2 hover:scale-110 transition-transform"
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
             </a>
             <a 
               href="mailto:gustavo@example.com" 
-              className="text-gray-400 hover:text-tech-indigo transition-colors animate-pulse-glow p-2 hover:scale-110 transition-transform"
+              className="text-gray-400 hover:text-tech-red transition-colors animate-pulse-glow p-2 hover:scale-110 transition-transform"
               aria-label="Email"
             >
               <Mail size={24} />
@@ -95,11 +95,19 @@ const Hero = () => {
         
         <div className="flex justify-center">
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-tech-indigo via-tech-purple to-tech-blue rounded-full blur-3xl opacity-20 absolute -inset-4 animate-pulse-glow"></div>
+            <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-tech-red via-tech-darkred to-tech-red rounded-full blur-3xl opacity-20 absolute -inset-4 animate-pulse-glow"></div>
             <div className="w-64 h-64 md:w-80 md:h-80 relative overflow-hidden rounded-full border-4 border-white/10 shadow-xl backdrop-blur-sm animate-float">
-              <div className="w-full h-full bg-gradient-to-r from-tech-indigo to-tech-purple opacity-30 absolute"></div>
+              {/* Substituição do avatar genérico pela foto enviada */}
+              <img 
+                src="/lovable-uploads/b4910a4e-ca87-422b-a853-63153f9770d2.png" 
+                alt="Gustavo" 
+                className="w-full h-full object-cover"
+              />
               
-              {/* Animated tech icons */}
+              {/* Overlay com gradiente */}
+              <div className="absolute inset-0 bg-gradient-to-r from-tech-darkred/10 to-tech-red/10"></div>
+              
+              {/* Animated tech icons - mantidos como decoração */}
               <div className="absolute -top-2 left-1/4 text-white/20 animate-float" style={{ animationDelay: '0.5s' }}>
                 <Server size={30} />
               </div>
@@ -112,8 +120,6 @@ const Hero = () => {
               <div className="absolute bottom-0 left-1/3 text-white/20 animate-float" style={{ animationDelay: '3.5s' }}>
                 <Cpu size={30} />
               </div>
-              
-              <div className="absolute inset-0 flex items-center justify-center text-6xl md:text-7xl font-bold text-white">G</div>
             </div>
           </div>
         </div>
