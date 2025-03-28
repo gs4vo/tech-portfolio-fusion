@@ -64,11 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				tech: {
-					blue: '#4f46e5',
-					indigo: '#6366f1',
-					purple: '#8b5cf6',
-					cyan: '#06b6d4',
-					dark: '#0f172a',
+					red: '#ea384c',
+					darkred: '#be2a3a',
+					black: '#121212',
+					darkerblack: '#0a0a0a',
+					gray: '#222222',
+					darkgray: '#1a1a1a',
 				}
 			},
 			borderRadius: {
@@ -102,8 +103,8 @@ export default {
 					'50%': { transform: 'translateY(-10px)' },
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 10px rgba(79, 70, 229, 0.5)' },
-					'50%': { boxShadow: '0 0 20px rgba(79, 70, 229, 0.8)' },
+					'0%, 100%': { boxShadow: '0 0 10px rgba(234, 56, 76, 0.5)' },
+					'50%': { boxShadow: '0 0 25px rgba(234, 56, 76, 0.8)' },
 				},
 				'typing': {
 					'from': { width: '0' },
@@ -129,7 +130,7 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'tech-gradient': 'linear-gradient(to right, #4f46e5, #8b5cf6, #06b6d4)'
+				'tech-gradient': 'linear-gradient(to right, #ea384c, #be2a3a)'
 			}
 		}
 	},
