@@ -64,8 +64,8 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				tech: {
-					blue: '#2563eb',
-					indigo: '#4f46e5',
+					blue: '#4f46e5',
+					indigo: '#6366f1',
 					purple: '#8b5cf6',
 					cyan: '#06b6d4',
 					dark: '#0f172a',
@@ -104,6 +104,17 @@ export default {
 				'glow': {
 					'0%, 100%': { boxShadow: '0 0 10px rgba(79, 70, 229, 0.5)' },
 					'50%': { boxShadow: '0 0 20px rgba(79, 70, 229, 0.8)' },
+				},
+				'typing': {
+					'from': { width: '0' },
+					'to': { width: '100%' },
+				},
+				'blink': {
+					'50%': { borderColor: 'transparent' }
+				},
+				'zap': {
+					'0%, 100%': { opacity: '0.1', filter: 'brightness(1)' },
+					'50%': { opacity: '0.2', filter: 'brightness(1.2)' }
 				}
 			},
 			animation: {
@@ -112,6 +123,9 @@ export default {
 				'pulse-slow': 'pulse-slow 3s infinite ease-in-out',
 				'float': 'float 6s infinite ease-in-out',
 				'glow': 'glow 3s infinite ease-in-out',
+				'typing': 'typing 3.5s steps(40, end) forwards',
+				'cursor-blink': 'blink 1s step-end infinite',
+				'zap': 'zap 3s infinite ease-in-out',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
